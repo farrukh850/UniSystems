@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@layer utilities {
+    @font-face {
+      font-family: 'Industry';
+      src: url('../../public/assets/fonts/IndustryTest-Medium.woff') format('woff');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'Industry';
+      src: url('../../public/assets/fonts/IndustryTest-Bold.woff') format('woff');
+      font-weight: 700;
+    }
+    .font-inter{
+        font-family: "Inter", sans-serif;
+    }
+    body{
+        font-family: 'Industry';
+    }
+    .container{
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .dull-black{
+        color: #222222;
+    }
+    .bg-dull-black{
+        background-color: #222222;
+    }
+    .text-yellow{
+        color: #FCBF00;
+    }
+    .border-yellow{
+        border-color: #FCBF00;
+    }
+    .text-offwhite{
+        color: #F8F8F8;
+    }
+    .bg-offwhite{
+        background-color: #F8F8F8;
+    }
+    .bg-yellow{
+        background-color: #FCBF00;
+    }
+}
+  @media (max-width:992px)  {
+     
+}

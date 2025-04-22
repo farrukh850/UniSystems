@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind generated CSS -->
+    <link href="../dist/output.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.svg" />
+    <title>UNISYSTEMS</title>
+</head>
+<body class="bg-[#222222]">
+    <!-- Header -->
+    <header class="p-4 border-b-[3px] border-yellow bg-white">
+        <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="lg:py-2.5 lg:px-6.5 lg:me-3.5">
+            <img src="./assets/images/logo.svg" alt="Unisystems" class="w-[206px] h-10 md:h-7">
+        </a>
+    
+        <!-- Desktop Navigation (hidden on mobile) -->
+        <nav class="hidden lg:flex items-center gap-1.5 mr-auto">
+            <!-- Dropdown Item 1 -->
+            <div class="group relative">
+                <button class="px-4 py-2 flex items-center gap-1.5 hover:bg-gray-100 rounded">
+                    <p class="text-[15px] text-gray-800 font-semibold font-inter leading-7">Unicontrol 2D</p>
+                    <img src="./assets/images/caret-down.svg" class="transition-transform group-hover:rotate-180" alt="Caret Icon Down">
+                </button>
+                <div class="absolute hidden group-hover:block mt-0 w-48 bg-white shadow-lg rounded-md z-50">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-inter">Option 1</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-inter">Option 2</a>
+                </div>
+            </div>
+        
+            <!-- Dropdown Item 2 -->
+            <div class="group relative">
+                <button class="p-3 flex items-center gap-1.5 hover:bg-gray-100 rounded">
+                    <p class="text-[15px] text-gray-800 font-semibold font-inter leading-7">Unicontrol 3D</p>
+                    <img src="./assets/images/caret-down.svg" class="transition-transform group-hover:rotate-180" alt="Caret Icon Down">
+                </button>
+                <div class="absolute hidden group-hover:block mt-0 w-48 bg-white shadow-lg rounded-md z-50">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-inter">Option 1</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-inter">Option 2</a>
+                </div>
+            </div>
+        
+            <!-- Regular Links -->
+            <a href="#" class="p-3 flex items-center gap-1.5"><p class="text-[15px] dull-black font-semibold font-inter leading-7">Chmura Unicontrol</p></a>
+            <a href="#" class="p-3 flex items-center gap-1.5"><p class="text-[15px] dull-black font-semibold font-inter leading-7">O nas</p></a>
+            <a href="#" class="p-3 flex items-center gap-1.5"><p class="text-[15px] dull-black font-semibold font-inter leading-7">Praca</p></a>
+            <a href="#" class="p-3 flex items-center gap-1.5"><p class="text-[15px] dull-black font-semibold font-inter leading-7">Aktualności</p></a>
+        </nav>
+    
+        <!-- Right Side (Button + Social) -->
+        <div class="flex items-center gap-4">
+            <!-- Contact Button (hidden on mobile) -->
+            <a href="#" class="hidden sm:flex items-center gap-2.5 justify-center w-[203px] h-[51px] bg-yellow rounded-[100px] hover:bg-yellow-600 transition-colors">
+            <p class="dull-black text-sm font-semibold font-inter leading-7 tracking-[5%]">Skontaktuj się</p>
+            <img src="./assets/images/arrow-right.svg" alt="Arrow Right">
+            </a>
+    
+            <!-- Social Icons (hidden on mobile) -->
+            <ul class="hidden lg:flex items-center gap-2.5">
+            <li><a href="#"><img src="./assets/images/insta.svg" alt="Instagram Icon"></a></li>
+            <li><a href="#"><img src="./assets/images/fb.svg" alt="Facebook Icon"></a></li>
+            <li><a href="#"><img src="./assets/images/youtube.svg" alt="Youtube Icon"></a></li>
+            </ul>
+    
+            <!-- Mobile Menu Button -->
+            <a href="#" class="flex sm:hidden items-center gap-2.5 justify-center w-[150px] h-[40px] bg-yellow rounded-[100px] ml-3">
+                <p class="dull-black text-xs font-semibold font-inter leading-7 tracking-[5%]">Skontaktuj się</p>
+                <img src="./assets/images/arrow-right.svg" alt="Arrow Right">
+            </a>
+            <button class="lg:hidden text-gray-800 focus:outline-none cursor-pointer" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        </div>
+  
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="hidden lg:hidden bg-white py-2 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-2">
+              <!-- Dropdown Item 1 -->
+              <div class="dropdown-mobile">
+                <button class="dropdown-toggle-mobile w-full p-3 flex items-center justify-between text-gray-800 font-semibold">
+                  <span>Unicontrol 2D</span>
+                  <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <div class="dropdown-content-mobile hidden pl-4">
+                  <a href="#" class="block p-3 text-gray-700 hover:bg-gray-50">Option 1</a>
+                  <a href="#" class="block p-3 text-gray-700 hover:bg-gray-50">Option 2</a>
+                </div>
+              </div>
+          
+              <!-- Dropdown Item 2 -->
+              <div class="dropdown-mobile">
+                <button class="dropdown-toggle-mobile w-full p-3 flex items-center justify-between text-gray-800 font-semibold">
+                  <span>Unicontrol 3D</span>
+                  <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <div class="dropdown-content-mobile hidden pl-4">
+                  <a href="#" class="block p-3 text-gray-700 hover:bg-gray-50">Option A</a>
+                  <a href="#" class="block p-3 text-gray-700 hover:bg-gray-50">Option B</a>
+                </div>
+              </div>
+          
+              <!-- Regular Links -->
+              <a href="#" class="p-3 text-gray-800 font-semibold hover:bg-gray-50">O nas</a>
+              <a href="#" class="p-3 text-gray-800 font-semibold hover:bg-gray-50">Praca</a>
+              <a href="#" class="p-3 text-gray-800 font-semibold hover:bg-gray-50">Aktualności</a>
+              
+              <!-- Mobile Contact Button -->
+              <a href="#" class="sm:hidden mt-2 p-3 text-center bg-yellow rounded-[100px] text-gray-800 font-semibold hover:bg-yellow-600 transition-colors">
+                Skontaktuj się
+              </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Banner -->
+        <section class="min-h-[450px] lg:min-h-[540px] h-full relative">
+            <div class="container min-h-[450px] lg:min-h-[540px] h-full relative flex items-center justify-center lg:justify-start">
+                <div class="relative z-50 text-center lg:text-start">
+                    <h1 class="font-bold text-4xl lg:text-5xl text-offwhite leading-[110%] mb-8">Precyzyjne <br> <b class="text-yellow">systemy sterowania <br> dla maszyn budowlanych</b></h1>
+                    <p class="text-base lg:text-[22px] font-inter font-medium text-offwhite leading-7">Technologia, która oszczędza czas i pieniądze.</p>
+                </div>
+            </div>
+            <video autoplay muted loop playsinline class="absolute top-0 bottom-0 left-0 right-0 z-0 w-full h-full object-cover">
+                <source src="./assets/videos/banner-video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,rgba(0,0,0,0)_33.5%,rgba(0,0,0,0)_78%,#222222_100%)] absolute inset-0"></div>
+        </section>
+        <!-- Poznaj systemy Unicontrol -->
+        <div class="p-7.5 bg-dull-black flex flex-col gap-7.5 items-center text-center lg:text-start">
+            <h2 class="text-3xl lg:text-5xl font-bold leading-[120%] text-yellow">Poznaj systemy Unicontrol</h2>
+            <img src="./assets/images/logo-alt.svg" alt="Unicontrol">
+        </div>
+        <div class="bg-dull-black">
+            <p class="text-base lg:text-[22px] text-offwhite leading-[130%] font-normal font-inter text-center px-15 pb-10.5">Systemy sterowania, dzięki którym operatorzy <b>koparek, spycharek i równiarek</b> <br> mogą pracować szybciej, dokładniej i bez zbędnych komplikacji.</p>
+        </div>
+        <section class="xl:py-7.5 pt-30 pb-7.5">
+            <div class="container">
+                <div class="border border-[#FCBF00] rounded-[15px] relative h-full xl:h-[330px] w-full z-50 p-6 xl:p-0 sm:pt-36 pt-20">
+                    <div class="absolute xl:left-[-33px] w-[80%] mx-auto left-1/2 xl:translate-0 -translate-x-1/2 top-[-30%] xl:top-0 xl:bottom-0 z-50"><img src="./assets/images/system.svg" class="mx-auto xl:m-0" alt="System Device"></div>
+                    <div class="grid grid-cols-12 items-center gap-2 xl:gap-8 h-full z-50 relative text-center xl:text-start">
+                        <div class="xl:col-span-3"></div>
+                        <div class="col-span-12 xl:col-span-3">
+                            <h3 class="text-3xl xl:text-5xl leading-[110%] text-yellow font-bold">+30%</h3>
+                            <span class="text-base my-3 xl:text-[22px] leading-7 text-yellow font-semibold font-inter block">Wydajności prac ziemnych koparki</span>
+                            <p class="text-sm xl:text-base leading-[150%] text-offwhite font-medium font-inter">Unicontrol pozwala na znaczne zwiększenie efektywności pracy maszyn budowlanych.</p>
+                        </div>
+                        <div class="col-span-12 xl:col-span-3">
+                            <h3 class="text-3xl xl:text-5xl leading-[110%] text-yellow font-bold">30 min</h3>
+                            <span class="text-base my-3 xl:text-[22px] leading-7 text-yellow font-semibold font-inter block">Potrzebne do nauki pracy z systemem</span>
+                            <p class="text-sm xl:text-base leading-[150%] text-offwhite font-medium font-inter">Prosta, intuicyjna obsługa z poziomu tabletu jest łatwa do przyswojenia i zapamiętania.</p>
+                        </div>
+                        <div class="col-span-12 xl:col-span-3">
+                            <h3 class="text-3xl xl:text-5xl leading-[110%] text-yellow font-bold">1000+</h3>
+                            <span class="text-base my-3 xl:text-[22px] leading-7 text-yellow font-semibold font-inter block">Godzin konsultacji z operatorami</span>
+                            <p class="text-sm xl:text-base leading-[150%] text-offwhite font-medium font-inter">System powstał w oparciu o szerokie konsultacje z operatorami maszyn budowlanych.</p>
+                        </div>
+                    </div>
+                    <div class="xl:absolute xl:top-0 xl:bottom-0 xl:right-0 h-full w-full rounded-[15px] xl:block hidden">
+                        <img src="./assets/images/girl-kopia.png" class="w-full h-full object-cover object-right" alt="Pattern BG">
+                        <div class="absolute bg-dull-black top-0 bottom-0 right-0 left-0 opacity-90 rounded-[15px]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-7.5">
+            <div class="container">
+                <div class="p-7.5 border border-yellow rounded-[15px] relative">
+                    <div class="w-full h-[250px] lg:h-[366px]">
+                        <img src="./assets/images/unicontrol-3d.png" class="w-full h-full object-cover" alt="Uni Control 2D">
+                    </div>
+                    <div class="flex flex-col gap-3 mt-3 max-w-full lg:max-w-[745px]">
+                        <h4 class="text-3xl lg:text-[42px] text-yellow font-bold leading-[130%]">Unicontrol 3D</h4>
+                        <p class="text-[22px] text-offwhite font-inter leading-[130%]">Najbardziej zaawansowany system sterowania maszyną</p>
+                        <small class="text-base text-offwhite font-inter font-medium leading-[150%]"><b class="text-yellow">Automatyczne pomiary, intuicyjna obsługa i mniej błędów</b> to więcej oszczędności i maksymalna efektywność na budowie. Pracuj szybciej, dokładniej i bez kompromisów!</small>
+                    </div>  
+                    <a href="#" class="flex items-center gap-2.5 justify-center w-[131px] h-[51px] bg-yellow rounded-[100px] lg:absolute lg:bottom-10.5 mt-4 lg:mt-0 lg:right-7.5"><p class="dull-black text-sm font-semibold font-inter leading-7 tracking-[5%]">WIĘCEJ</p><img src="../public/assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-11.5 mt-11.5">
+                    <div class="w-full p-7.5 border border-yellow rounded-[15px] relative min-h-[619px]">
+                        <div class="w-full h-[272px]">
+                            <img src="./assets/images/unicontrol-2d.png" class="w-full h-full object-cover" alt="Uni Control 3D">
+                        </div>
+                        <div class="flex flex-col gap-3 max-w-[745px] mt-3">
+                            <h4 class="text-3xl lg:text-[42px] text-yellow font-bold leading-[130%]">Unicontrol 2D</h4>
+                            <p class="text-[22px] text-offwhite font-inter leading-[130%]">Duże oszczędności przy małych projektach</p>
+                            <small class="text-base text-offwhite font-inter font-medium leading-[150%]">Zwiększ wydajność <b class="text-yellow">koparki</b> i redukuj koszty dzięki Unicontrol 2D – prostemu i przystępnemu cenowo systemowi sterowania maszynami.</small>
+                        </div>  
+                        <a href="#" class="flex items-center gap-2.5 justify-center w-[131px] h-[51px] bg-yellow rounded-[100px] lg:absolute lg:bottom-10.5 mt-4 lg:mt-0 lg:right-7.5"><p class="dull-black text-sm font-semibold font-inter leading-7 tracking-[5%]">WIĘCEJ</p><img src="../public/assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                    </div>
+                    <div class="w-full p-7.5 border border-yellow rounded-[15px] relative min-h-[619px]">
+                        <div class="w-full h-[272px]">
+                            <img src="./assets/images/tyczka.png" class="w-full h-full object-cover" alt="tyczka">
+                        </div>
+                        <div class="flex flex-col gap-3 max-w-[745px] mt-3">
+                            <h4 class="text-3xl lg:text-[42px] text-yellow font-bold leading-[130%]">Tyczka Unicontrol</h4>
+                            <p class="text-[22px] text-offwhite font-inter leading-[130%]">Szybka i precyzja i kontrola goedezyjna</p>
+                            <small class="text-base text-offwhite font-inter font-medium leading-[150%]"><b class="text-yellow">Szybkie i dokładne pomiary</b> dla operatorów, majstrów i kierowników budowy. Prosta obsług a, maksymalna efektywność!</small>
+                        </div>  
+                        <a href="#" class="flex items-center gap-2.5 justify-center w-[131px] h-[51px] bg-yellow rounded-[100px] lg:absolute lg:bottom-10.5 mt-4 lg:mt-0 lg:right-7.5"><p class="dull-black text-sm font-semibold font-inter leading-7 tracking-[5%]">WIĘCEJ</p><img src="../public/assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Połącz swoją flotę systemem Unicontrol -->
+        <section class="pt-15 pb-22.5 relative">
+            <div class="container">
+                <h3 class="text-3xl lg:text-5xl text-yellow font-bold leading-[120%] text-center relative z-50">Połącz swoją flotę systemem Unicontrol</h3>
+                <div class="border border-yellow rounded-2xl mt-6 relative z-50">
+                    <div class="grid grid-cols-12 lg:grid-cols-14 p-7.5 gap-4 lg:gap-7.5">
+                        <div class="col-span-6 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-1.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Koparka 2D</p>
+                        </div>
+                        <div class="col-span-6 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-2.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Koparka 2D</p>
+                        </div>
+                        <div class="col-span-6 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-3.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Spycharka</p>
+                        </div>
+                        <div class="col-span-6 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-4.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Równiarka</p>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-5.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Skid Steer</p>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-6.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Ładowarka</p>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2 flex flex-col items-center gap-3 lg:gap-10.5">
+                            <img src="./assets/images/machine-7.png" alt="Machine Image">
+                            <p class="text-sm lg:text-[22px] leading-[130%] text-offwhite font-inter">Tyczka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-[15%] bottom-0 right-0 h-[80%] w-full rounded-[15px]">
+                <img src="./assets/images/girl-kopia.png" class="w-full h-full object-cover object-right" alt="Pattern BG">
+                <div class="absolute bg-dull-black top-0 bottom-0 right-0 left-0 opacity-90 rounded-[15px]"></div>
+            </div>
+        </section>
+        <!-- Stały serwis i wsparcie -->
+        <section class="bg-offwhite pb-15 lg:pb-0">
+           <div class="container">
+            <div class="flex flex-col-reverse lg:flex-row items-center">
+                <div class="flex flex-col flex-1">
+                    <h5 class="text-3xl lg:text-[42px] text-yellow font-bold leading-[130%] mb-4">Stały serwis i wsparcie</h5>
+                    <p class="text-[22px] dull-black font-inter leading-[130%] mb-3">Działamy w całej Polsce</p>
+                    <small class="text-base dull-black font-inter leading-[150%]">Bez względu na to, gdzie się znajdujesz, możesz liczyć na nasze wsparcie. Nasi przedstawiciele są obecni <b>w każdym województwie,</b> co gwarantuje <b>szybki czas reakcji</b> i możliwość bezpośredniego kontaktu. <br><br>
+                    Dzięki temu instalacje i serwisowanie przebiegają sprawnie, a ewentualne usterki są <b>usuwane w ekspresowym tempie.</b></small>
+                    <div class="mt-7.5 flex items-start justify-center lg:justify-start">
+                        <a href="#" class="py-3 px-6 text-sm leading-7 text-[#D9D9D9] bg-[#545454] rounded-[163px] border border-[#222222]">ZNAJDŹ DORADCĘ</a>
+                    </div>
+                </div>
+                <div class="lg:py-11.5 lg:px-12.5 flex-1">
+                    <div class="max-w-[600px] h-[350px] lg:h-[480px] mx-auto">
+                        <img src="./assets/images/van.png" class="w-full h-full object-contain" alt="Van">
+                    </div>
+                </div>
+            </div>
+           </div>
+        </section>
+        <!-- Kompleksowa obsługa warta zaufania -->
+        <section class="pb-15">
+            <div class="container">
+                <h3 class="text-3xl lg:text-5xl text-yellow font-bold leading-[120%] text-center relative z-50 pt-7.5 pb-3">Kompleksowa obsługa warta zaufania</h3>
+                <p class="text-[22px] text-offwhite font-inter leading-[130%] text-center pt-3 pb-15">Zostajemy z Tobą na dłużej –<br>  nasza współpraca nie kończy się na sprzedaży.</p>
+                <div class="grid grid-cols-12 gap-7.5 items-start">
+                    <div class="col-span-12 lg:col-span-4">
+                        <div class="w-full h-[181px]">
+                            <img src="./assets/images/checker.png" class="w-full h-full object-cover" alt="Image">
+                        </div>
+                        <h5 class="py-3 font-inter text-[22px] leading-7 font-semibold text-offwhite">Zdalne wsparcie techniczne</h5>
+                        <p class="font-inter text-base leading-[150%] text-offwhite">Nasz zespół techniczny jest zawsze gotowy do działania. Błyskawicznie identyfikujemy usterki i wdrażamy skuteczne rozwiązania. Zapewniamy sprawne wsparcie na miejscu oraz zdalną pomoc, aby Twoje maszyny mogły działać bez przestojów i z maksymalną wydajnością.</p>
+                    </div>
+                    <div class="col-span-12 lg:col-span-4">
+                        <div class="w-full h-[181px]">
+                            <img src="./assets/images/checker.png" class="w-full h-full object-cover" alt="Image">
+                        </div>
+                        <h5 class="py-3 font-inter text-[22px] leading-7 font-semibold text-offwhite">Profesjonalne doradztwo</h5>
+                        <p class="font-inter text-base leading-[150%] text-offwhite">Oferujemy indywidualne podejście do każdego klienta, analizując potrzeby i specyfikę jego działalności. Doradzamy w wyborze najlepszego systemu sterowania, który zwiększy efektywność pracy i zapewni precyzję działania.</p>
+                    </div>
+                    <div class="col-span-12 lg:col-span-4">
+                        <div class="w-full h-[181px]">
+                            <img src="./assets/images/checker.png" class="w-full h-full object-cover" alt="Image">
+                        </div>
+                        <h5 class="py-3 font-inter text-[22px] leading-7 font-semibold text-offwhite">Rozbudowa floty</h5>
+                        <p class="font-inter text-base leading-[150%] text-offwhite">Zapewniamy kompleksowe wsparcie, umożliwiające sprawną integrację systemów sterowania we wszystkich maszynach. Niezależnie od skali wdrożenia – od pojedynczej maszyny po całą flotę – proces rozbudowy przebiega szybko, precyzyjnie i jest w pełni dopasowany do specyficznych potrzeb.</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center mt-7.5">
+                    <a href="#" class="w-[157px] flex items-center justify-center h-[51px] bg-[#545454] border border-[#222222] text-sm text-offwhite font-semibold leading-7 rounded-[163px]">WIĘCEJ O NAS</a>
+                </div>
+            </div>
+        </section>
+        <!-- Zaufali nam -->
+        <section class="bg-offwhite">
+            <div class="container">
+                <h4 class="text-yellow text-3xl lg:text-5xl leading-[120%] font-bold pt-7.5 pb-3 text-center">Zaufali nam</h4>
+                <div class="grid items-center grid-cols-3 gap-3 lg:gap-15 py-7.5 justify-center max-w-full lg:max-w-[70%] mx-auto">
+                    <div class="col-span-1">
+                        <img src="./assets/images/brand-1.svg" class="mx-auto" alt="Mostostal Icon">
+                    </div>
+                    <div class="col-span-1">
+                        <img src="./assets/images/brand-2.svg" class="mx-auto" alt="Antex Icon">
+                    </div>
+                    <div class="col-span-1">
+                        <img src="./assets/images/brand-3.svg" class="mx-auto" alt="NDI Icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Aktualności -->
+        <section class="bg-offwhite pb-15">
+            <div class="container">
+                <h4 class="text-yellow text-3xl lg:text-5xl leading-[120%] font-bold pt-7.5 pb-3 text-center">Aktualności</h4>
+                <div class="grid grid-cols-12 items-center gap-7.5 mt-7.5">
+                    <div class="col-span-12 lg:col-span-4 rounded-[15px] overflow-hidden border border-[#222222] relative min-h-[653px]">
+                        <div class="w-full h-[292px]">
+                            <img src="./assets/images/unisystems-desk.png" class="w-full h-full object-cover" alt="Unisystem Desk">
+                        </div>
+                        <div class="p-7.5">
+                            <h5 class="text-[26px] dull-black leading-[120%] font-bold">Czy można przetestować system unicontrol w pracy?</h5>
+                            <p class="text-base dull-black leading-[150%] font-inter mt-3">The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                        </div>
+                        <a href="#" class="flex justify-center items-center border border-[#222222] gap-2.5 w-[184px] h-[51px] rounded-[100px] xl:absolute xl:right-7.5 xl:bottom-10.5 mt-4 mb-8 ms-7.5 xl:m-0"><p class="text-xs font-inter text-black leading-7 font-semibold">CZUTAJ WIĘCEJ</p><img src="./assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                    </div>
+                    <div class="col-span-12 lg:col-span-4 rounded-[15px] overflow-hidden border border-[#222222] relative min-h-[653px]">
+                        <div class="w-full h-[292px]">
+                            <img src="./assets/images/unisystems-desk.png" class="w-full h-full object-cover" alt="Unisystem Desk">
+                        </div>
+                        <div class="p-7.5">
+                            <h5 class="text-[26px] dull-black leading-[120%] font-bold">Czy można przetestować system unicontrol w pracy?</h5>
+                            <p class="text-base dull-black leading-[150%] font-inter mt-3">The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                        </div>
+                        <a href="#" class="flex justify-center items-center border border-[#222222] gap-2.5 w-[184px] h-[51px] rounded-[100px] xl:absolute xl:right-7.5 xl:bottom-10.5 mt-4 mb-8 ms-7.5 xl:m-0"><p class="text-xs font-inter text-black leading-7 font-semibold">CZUTAJ WIĘCEJ</p><img src="./assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                    </div>
+                    <div class="col-span-12 lg:col-span-4 rounded-[15px] overflow-hidden border border-[#222222] relative min-h-[653px]">
+                        <div class="w-full h-[292px]">
+                            <img src="./assets/images/unisystems-desk.png" class="w-full h-full object-cover" alt="Unisystem Desk">
+                        </div>
+                        <div class="p-7.5">
+                            <h5 class="text-[26px] dull-black leading-[120%] font-bold">Czy można przetestować system unicontrol w pracy?</h5>
+                            <p class="text-base dull-black leading-[150%] font-inter mt-3">The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                        </div>
+                        <a href="#" class="flex justify-center items-center border border-[#222222] gap-2.5 w-[184px] h-[51px] rounded-[100px] xl:absolute xl:right-7.5 xl:bottom-10.5 mt-4 mb-8 ms-7.5 xl:m-0"><p class="text-xs font-inter text-black leading-7 font-semibold">CZUTAJ WIĘCEJ</p><img src="./assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skontaktuj się z nami! -->
+        <section class="bg-yellow">
+            <div class="w-full h-[314px]">
+                <img src="./assets/images/cta.jpg" class="hidden lg:block w-full h-full object-cover object-center" alt="Team">
+                <img src="./assets/images/cta-mobile.png" class="block lg:hidden w-full h-full object-cover object-center" alt="Team">
+            </div>
+            <div class="container">
+                <div class="py-3 pb-8 lg:pb-0 flex flex-col lg:flex-row items-center max-w-[full] lg:max-w-[80%] mx-auto justify-between">
+                    <div class="flex-1 flex flex-col text-center lg:text-start">
+                        <h4 class="text-3xl lg:text-5xl leading-[110%] dull-black font-bold pt-7.5 pb-3">Skontaktuj się z nami!</h4>
+                        <p class="text-base lg:text-[22px] leading-[130%] dull-black font-inter pt-3 pb-4 lg:pb-15">Pomożemy dobrać odpowiednią technologię, zaprosimy na prezentację i doradzimy w kwestiach technicznych.</p>
+                    </div>
+                    <div class="flex-1">
+                        <a href="#" class="flex ml-auto justify-center items-center bg-white gap-2.5 w-[184px] h-[51px] rounded-[100px]"><p class="text-xs font-inter text-black leading-7 font-semibold">CZUTAJ WIĘCEJ</p><img src="./assets/images/arrow-right.svg" alt="Arrow Right"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="pt-7.5">
+        <div class="container">
+            <div class="grid grid-cols-14 pb-[77px] gap-4 lg:gap-15">
+                <div class="col-span-14 lg:col-span-6 border-t border-yellow lg:border-0">
+                    <a href="#" class="py-3.5 block"><img src="./assets/images/footer-logo.svg" alt="UNISYSTEMS"></a>
+                    <p class="text-base text-offwhite leading-[150%] font-inter font-medium pl-3.5 max-w-[144px]">Unisystems Sp.j.ul. Nawojowska 5b31-346 KrakówNIP 9452244314</p>
+                </div>
+                <div class="col-span-14 lg:col-span-3 border-t border-yellow lg:border-0 pt-3 lg:pt-0">
+                    <h6 class="text-base leading-[160%] text-offwhite font-inter font-bold my-2">UNICONTROL 2D</h6>
+                    <ul>
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Koparka</a></li>
+                    </ul>
+                    <h6 class="text-base leading-[160%] text-offwhite font-inter font-bold my-2">UNICONTROL 3D</h6>
+                    <ul class="flex flex-col gap-1">
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Koparka</a></li>
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Ładowarka kołowa </a></li>
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Równiarka</a></li>
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Ładowak kompaktowy</a></li>
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Spycharka</a></li>
+                        <li><a href="#" class="text-base my-1 pl-3 leading-[150%] text-offwhite font-inter font-medium">Unicontrol 	Rover</a></li>
+                    </ul>
+                    <h6 class="text-base leading-[160%] text-offwhite font-inter font-bold my-2">UNCICONTROL CLOUD</h6>
+                </div>
+                <div class="col-span-14 lg:col-span-2">
+                    <div class="flex flex-col">
+                        <a class="text-base leading-[160%] text-offwhite font-inter font-bold mb-3.5 mt-2">O NAS</a>
+                        <a class="text-base leading-[160%] text-offwhite font-inter font-bold mb-3.5">AKTUALNOŚCI</a>
+                        <a class="text-base leading-[160%] text-offwhite font-inter font-bold mb-3.5">PRACA</a>
+                    </div>
+                </div>
+                <div class="col-span-14 lg:col-span-3 border-t border-yellow lg:border-0 pt-3 lg:pt-0">
+                    <div class="flex items-center gap-3.5 mt-2">
+                        <a href="#"><img src="./assets/images/footer-fb.svg" alt="Facebook"></a>
+                        <a href="#"><img src="./assets/images/footer-insta.svg" alt="Instagram"></a>
+                        <a href="#"><img src="./assets/images/footer-x.svg" alt="X"></a>
+                        <a href="#"><img src="./assets/images/footer-linkedin.svg" alt="Linkedin"></a>
+                    </div>
+                </div>  
+            </div>
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between py-2 px-0 lg:px-3.5 gap-3 lg:gap-0">
+              <div class="flex items-center flex-col-reverse lg:flex-row gap-2">
+                <small class="text-base text-center lg:text-start text-offwhite leading-[150%] font-inter font-medium">© 2025 Unisystems. Wszystkie prawa zastrzeżone</small>  
+                <a href="#" class="text-base text-offwhite leading-[150%] font-inter font-medium underline">Polityka prywatności</a>
+              </div>
+              <div class="flex items-center gap-2">
+                <small class="text-base text-offwhite leading-[150%] font-inter font-medium">Realizacja:</small>  
+                <a href="#" class="text-base text-offwhite leading-[150%] font-inter font-medium underline">Stocznia Grafiki</a>
+              </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
