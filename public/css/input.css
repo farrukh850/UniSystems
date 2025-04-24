@@ -49,6 +49,56 @@
     .animate-slow-pan {
     animation: slowPan 5s linear infinite;
     }
+
+    /* Custom css for components */
+    .card-container {
+        @apply border border-yellow rounded-[15px] relative overflow-hidden;
+      }
+    
+      /* Image Container */
+      .card-image-container {
+        @apply lg:p-7.5 w-full h-[250px] lg:h-[366px];
+      }
+    
+      /* Image Style */
+      .card-image {
+        @apply w-full h-full object-cover;
+      }
+    
+      /* Content Container */
+      .card-content {
+        @apply p-7.5 flex flex-col gap-3 mt-3 max-w-full lg:max-w-[745px];
+      }
+    
+      /* Title */
+      .card-title {
+        @apply text-3xl lg:text-[42px] text-yellow font-bold leading-[130%];
+      }
+    
+      /* Subtitle */
+      .card-subtitle {
+        @apply text-[22px] text-offwhite font-inter leading-[130%];
+      }
+    
+      /* Description */
+      .card-description {
+        @apply text-base text-offwhite font-inter font-medium leading-[150%];
+      }
+    
+      /* Highlight Text */
+      .card-highlight {
+        @apply text-yellow;
+      }
+    
+      /* Button */
+      .card-button {
+        @apply flex items-center gap-2.5 justify-center w-[131px] h-[51px] bg-yellow rounded-[100px] lg:absolute lg:bottom-10.5 mt-4 lg:mt-0 lg:right-7.5 mb-7.5 mx-auto lg:mb-0;
+      }
+    
+      /* Button Text */
+      .card-button-text {
+        @apply dull-black text-sm font-semibold font-inter leading-7 tracking-[5%];
+      }
 }
   @media (max-width:992px)  {
      
