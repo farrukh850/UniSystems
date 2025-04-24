@@ -42,6 +42,13 @@
     .bg-yellow{
         background-color: #FCBF00;
     }
+    @keyframes slowPan {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-10%); }
+    }
+    .animate-slow-pan {
+    animation: slowPan 5s linear infinite;
+    }
 }
   @media (max-width:992px)  {
      
