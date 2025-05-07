@@ -1,20 +1,15 @@
 @import "tailwindcss";
 @layer utilities {
-    /* @font-face {
-      font-family: 'Industry';
-      src: url('../../public/assets/fonts/IndustryTest-Medium.woff') format('woff');
-      font-weight: 400;
-    }
     @font-face {
       font-family: 'Industry';
-      src: url('../../public/assets/fonts/IndustryTest-Bold.woff') format('woff');
-      font-weight: 700;
-    } */
+      src: url('../../public/assets/fonts/Industry-Bold.woff2') format('woff2');
+      font-weight: 400;
+    }
     .font-inter{
         font-family: "Inter", sans-serif;
     }
     body{
-        font-family: "Barlow", sans-serif;
+        font-family: "Industry", sans-serif;
     }
     .container{
         max-width: 1320px;
@@ -49,6 +44,44 @@
     .animate-slow-pan {
     animation: slowPan 5s linear infinite;
     }
+    /* Minimal CSS for expanded states */
+    .expandable-card.active {
+        border: 1px solid #FCBF00;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #222;
+    }
+    .expandable-card.active .expandable-card-detail {
+        max-height: 500px;
+    }
+    .expandable-card.active .expandable-card-icon {
+        transform: rotate(90deg);
+    }
+
+    
+
+
+    .circular-reveal {
+        mask-image: radial-gradient(
+          circle at center,
+          transparent 0%,
+          white 15%,
+          white 100%
+        );
+        mask-size: 0% 0%;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        transition: 
+          mask-size 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+          opacity 10.5s ease;
+        filter: drop-shadow(0 0 100px rgba(255, 255, 255, 0.5));
+      }
+      .group:hover .circular-reveal {
+        mask-size: 200% 200%;
+        opacity: 1;
+      }
+      
+      
     
 }
   @media (max-width:992px)  {

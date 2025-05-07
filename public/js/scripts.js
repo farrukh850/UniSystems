@@ -29,3 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 });
+
+document.querySelectorAll('.expandable-card').forEach(card => {
+  card.addEventListener('click', function() {
+    // Close all cards first
+    document.querySelectorAll('.expandable-card').forEach(otherCard => {
+      if (otherCard !== this) {
+        otherCard.classList.remove('active');
+      }
+    });
+    
+    // Toggle current card
+    this.classList.toggle('active');
+  });
+});
+
